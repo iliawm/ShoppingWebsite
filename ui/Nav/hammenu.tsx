@@ -11,7 +11,7 @@ export interface NavItem {
 }
 
 
-const HamMenu = ({items}:{items:NavItem}) => {
+const HamMenu = ({items}:{items:NavItem[]}) => {
     const [Ham,Setham]=useState(false)
     const [sec,setSec]=useState(1)
     
