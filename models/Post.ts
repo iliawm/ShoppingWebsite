@@ -9,11 +9,19 @@ title:{
     type:String,
     required:true,
     },
-    Auth:{
-        type:String,
-        unique:true,
+    Banner:{
+    type:String,
         required:true
     },
+    Auth:{
+        type:String,
+        ref:"user",
+        required:true
+    },
+    IsValidated:{
+    type:Boolean
+    },
+    
     createdAt: { type: Date, default: Date.now }
 })
 export const Post = mongoose.models.Posts || mongoose.model("Posts",Posts)

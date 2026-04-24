@@ -1,3 +1,6 @@
+import Image from "next/image";
+import PostF from "@/ui/PostF/Posts";
+import {Suspense} from "react";
 
 
 const Posts =async () => {
@@ -13,12 +16,12 @@ const Posts =async () => {
     }catch (error){
         console.log("something went wrong")
     }
-    posts? console.log(posts): null
+    // posts? console.log(posts): null
     return (
-        <div className={"py-5 px-2 w-full h-fit overflow-x-scroll flex"}>
-            <div className={"w-full "}>
-                
-            </div>
+        <div className={"py-5 px-4 w-full h-fit overflow-x-scroll flex items-center justify-end hide-scrollbar gap-5"}>
+            <Suspense fallback={<div>loading...</div>}>
+                <PostF items={posts?.post}/>
+            </Suspense>
         </div>
     )
 }

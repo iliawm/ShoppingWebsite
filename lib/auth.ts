@@ -30,7 +30,7 @@ export async function getAuth() {
         plugins: [nextCookies()],
         secret: process.env.BETTER_AUTH_SECRET!,
         baseURL: process.env.BETTER_AUTH_URL,
-        trustedOrigins: ["http://localhost:3000", "http://192.168.1.7:3000"],
+        trustedOrigins: ["http://localhost:3000", "http://192.168.1.*:3000"],
     });
 
     return authInstance;

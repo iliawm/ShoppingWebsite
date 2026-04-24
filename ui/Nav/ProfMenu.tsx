@@ -53,7 +53,7 @@ const ProfMenu = () => {
             </svg>
             </div>
             <div
-                className={`absolute w-90 h-60 bg-white border gap-2 flex flex-row-reverse border-gray-300 top-10 rounded-lg shadow-sm p-5  shadow-black transition-all delay-1000 ease-out ${open ? "flex" : "hidden"}`}
+                className={`absolute z-90 w-90 h-60 bg-white border gap-2 flex flex-row-reverse border-gray-300 top-10 rounded-lg shadow-sm p-5  shadow-black transition-all delay-1000 ease-out ${open ? "flex" : "hidden"}`}
                 style={{ top: "calc(5.5rem)" }}
                 onMouseEnter={handleMenuMouseEnter}
                 onMouseLeave={handleMenuMouseLeave}
