@@ -1,15 +1,13 @@
 import { getMongoDb } from "@/lib/db";
-import { betterAuth, type Auth } from "better-auth";
+import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { nextCookies } from "better-auth/next-js";
 import { createAuthClient } from "better-auth/react";
 
-let authInstance: Auth | null = null;  
+let authInstance: any = null;
 
 export async function getAuth() {
-    if (authInstance) {
-        return authInstance;
-    }
+    if (authInstance) return authInstance;
 
     const db = await getMongoDb();
 
