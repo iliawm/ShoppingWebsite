@@ -66,20 +66,20 @@ const Page = () => {
                 <form onSubmit={handlesubmit} className={"pt-4 flex flex-col gap-2"} >
                     <div className={`${error?"flex":"hidden"} w-full items-center justify-center bg-red-500/80 text-white py-2 rounded-lg`}>{error}</div>
                     <span className={"w-fit h-fit text-lg mt-4"}>ایمیل</span>
-                    <input type="email" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onInput={(e)=>{
+                    <input type="email" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onChange={(e)=>{
                         setForm({
                             ...form,
                             email:e.target.value
                         })}} required={true} autoFocus={true}/>
                      <span className={"w-fit h-fit text-lg mt-4"}>پسورد</span>
-                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onInput={(e)=>{
+                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onChange={(e)=>{
                         setForm({
                             ...form,
                             password:e.target.value
                         })
                     }} required={true}/>
                     <span className={"w-fit h-fit text-lg mt-4"}>تکرار پسورد</span>
-                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onInput={(e)=>{
+                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onChange={(e)=>{
                         setForm({
                             ...form,
                             confPass:e.target.value

@@ -52,14 +52,14 @@ const Page = () => {
                 <h1 className={"text-xl pb-4 border-[#fc1374]/70 border-b"}>ورود</h1>
                 <form onSubmit={handlesubmit} className={"pt-4 flex flex-col gap-2"}>
                     <span className={"w-fit h-fit text-lg mt-4"}>ایمیل</span>
-                    <input type="email" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onInput={(e)=>{
+                    <input type="email" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onChange={(e)=>{
                         setForm({
                             ...form,
                             email:e.target.value
                         })
                     }}/>
                      <span className={"w-fit h-fit text-lg mt-4"}>پسورد</span>
-                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onInput={(e)=>{
+                    <input type="password" className={"w-55 h-fit bg-[#fc1374] focus:outline-0 rounded-md py-2 px-2 text-white autofill:bg-[#fc1374] "} dir={"auto"} onChange={(e)=>{
                         setForm({
                             ...form,
                             password:e.target.value
