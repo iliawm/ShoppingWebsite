@@ -3,6 +3,7 @@ import Posts from "@/Components/posts";
 import Herosection from "@/Components/Herosection";
 import Offer from "@/Components/Offer";
 import {Suspense} from "react";
+import Categories from "@/Components/categories";
 
 
 
@@ -19,6 +20,11 @@ export default function Home() {
           <section className={"w-full shrink-0 h-fit"}>
               <Suspense fallback={<div>loading...</div>}>
             <Offer/>
+              </Suspense>
+          </section>
+          <section>
+              <Suspense>
+                    <Categories/>
               </Suspense>
           </section>
       </div>

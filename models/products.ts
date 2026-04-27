@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import { Categories } from "@/models/Catagories"
 const CommentSchema = new mongoose.Schema({
     author: {
         name: { type: String, required: true },
@@ -30,8 +30,9 @@ const ProductSchema =new mongoose.Schema({
         
     },
     Category:{
-        type:String,
-        required:true,
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Categories",
+        
     },
     sku:{
         type:String,

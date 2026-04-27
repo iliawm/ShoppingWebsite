@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import {user} from "@/models/user";
 
 const Posts =new mongoose.Schema({
 title:{
@@ -13,11 +14,7 @@ title:{
     type:String,
         required:true
     },
-    Auth:{
-        type:String,
-        ref:"user",
-        required:true
-    },
+    Auth: { type: mongoose.Schema.Types.ObjectId, ref: 'user'},
     IsValidated:{
     type:Boolean
     },

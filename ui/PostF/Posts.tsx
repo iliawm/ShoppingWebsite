@@ -22,17 +22,18 @@ const PostF = ({items}:{items:any[]}) => {
     return (
         <>
             {items?.map((e:any, index:number) => {
+                
                 const video = e.video
                 return(
-                    <span key={index} className={"flex flex-col w-fit h-full items-center gap-2 cursor-pointer hover:opacity-70 "} title={e.title} onClick={() => {
+                    <span key={index} className={"flex flex-col w-fit h-full items-center justify-between gap-2 cursor-pointer hover:opacity-70 "} title={e.title} onClick={() => {
                         setOpen(true)
                         VidUrl(video)
                         setIsMuted(true)
                     }}>
                         <div className={"w-20 h-20 rounded-full relative ring-[#fc1a73] ring-3"} dir={"rtl"}>
-                            <Image alt={e.title} src={!e.Banner ? e.Banner : "/placeholder.png"} sizes={"100%"} fill className={"w-full h-full rounded-full object-cover"} />
+                            <Image alt={e.title} src={e.Banner ? e.Banner : "/placeholder.png"} sizes={"100%"} fill className={"w-full h-full rounded-full object-cover"} />
                         </div>
-                        <div className={'text-[#fc1a73] w-fit max-w-15 overflow-hidden text-nowrap text-sm'} dir={"ltr"}>ahmad</div>
+                        <div className={'text-[#fc1a73] w-fit max-w-50 overflow-hidden text-center text-nowrap text-sm'} dir={"ltr"}>{e.Auth?.name ? e.Auth.name : "Deleted Account"}</div>
                     </span>
                 )
             })}

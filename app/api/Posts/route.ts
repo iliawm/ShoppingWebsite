@@ -2,19 +2,20 @@ import {Post} from "@/models/Post";
 import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-
+import { user } from "@/models/user";
 export async function GET(request:any){
     try {
         
     
-    const posts = await Post.find({})
-    if (!posts){
+    const posts = await Post.find({}).populate("Auth", "name")
+        if (!posts) {
         return NextResponse.json({
-            message:"No products"
+            message: "No products"
         })
     }
+        
     return NextResponse.json({
-        post:posts
+        post:posts,
     },{status:200})
     }
     catch (error){

@@ -50,11 +50,10 @@ const Offer = async () => {
                 </div>
                 <div className={"w-full h-70 lg:h-90 px-1 lg:px-3 py-2 lg:py-8 gap-7 hide-scrollbar flex overflow-x-scroll"}>
                     {offerProducts.map((e:any,index:number)=>{
-                        // console.log(e)
                         return(
                             <div key={index} className={"w-53 lg:h-full h-fit shrink-0 flex-col  flex rounded-lg items-center bg-white py-3"}>
                                 <div>
-                                    <Image src={`/placeholder.png`} alt={``} width={400} height={400} className={"object-fill w-45 lg:h-40 h-35 rounded-lg"} loading={"lazy"}/>
+                                    <Image src={e.image||`/placeholder.png`} alt={``} width={400} height={400} className={"object-fill w-45 lg:h-40 h-35 rounded-lg"} loading={"lazy"}/>
                                 </div>
                                 <div className={"text-start w-full h-fit lg:h-full mt-2 text-gray-600 text-base px-3"}>
                                     {e.name}

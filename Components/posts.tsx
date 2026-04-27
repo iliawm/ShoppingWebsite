@@ -16,7 +16,7 @@ const Posts =async () => {
     }catch (error){
         console.log("something went wrong")
     }
-    // posts? console.log(posts): null
+    posts? console.log("aa",posts): null
     return (
         <div className={"py-5 px-4 w-full h-fit overflow-x-scroll flex items-center justify-end hide-scrollbar gap-5"}>
             <Suspense fallback={<div>loading...</div>}>
