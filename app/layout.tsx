@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   title: "فروشگاه لوازم",
   description: "لوازم خود را به ما بسپارید",
 };
-
+export const dynamic = 'force-dynamic';
 export default function RootLayout({
   children,
 }: Readonly<{
