@@ -57,7 +57,10 @@ export default function RootLayout({
         dir={"rtl"}
       >
       <section className={"NavSection h-fit bg-white  w-full flex flex-col z-70"}>
+          <Suspense fallback={<div>Loading...</div>}>
           <Navbar/>
+          </Suspense>
+
           <div className={"UnderNav w-full h-fit  gap-3 flex"}>
               <Suspense fallback={<div>Loading...</div>}>
                   <UnderNav />
