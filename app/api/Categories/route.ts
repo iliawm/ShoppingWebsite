@@ -1,8 +1,10 @@
 import { Categories } from "@/models/Catagories";
 import { NextResponse } from 'next/server';
+import {dbconnect} from "@/lib/db";
 
 export async function GET() {
     try {
+        await dbconnect()
         const categories = await Categories.find({});
 
         if (!categories || categories.length === 0) {
@@ -27,6 +29,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
     try {
+        await dbconnect()
         const body = await request.json();
         const { name, Slug } = body;
 

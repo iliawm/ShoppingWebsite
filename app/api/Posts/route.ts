@@ -1,12 +1,13 @@
+import { user } from "@/models/user";
 import {Post} from "@/models/Post";
 import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import { user } from "@/models/user";
+import {dbconnect} from "@/lib/db";
 export async function GET(request:any){
     try {
-        
-    
+        await dbconnect()
+        console.log("User model registered:", !!user);
     const posts = await Post.find({}).populate("Auth", "name")
         if (!posts) {
         return NextResponse.json({
@@ -26,6 +27,7 @@ export async function GET(request:any){
 
 export async function POST(req: NextRequest) {
     try {
+        await dbconnect()
         const formData = await req.formData();
         const title = formData.get('title') as string;
         const video = formData.get('video') as File;
