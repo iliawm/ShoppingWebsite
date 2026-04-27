@@ -1,12 +1,35 @@
 "use client"
 
-import { useState, useRef } from "react";
+import {useState, useRef, useEffect} from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import {usePathname, useSearchParams} from "next/navigation";
 import { ShoppingBag, Heart, ShoppingCart, User } from "lucide-react";
 const UnderNav = () => {
     const [Ham, Setham] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const search = useSearchParams()
+    const [Catagories , setCats]=useState([])
+
+    useEffect(()=>{
+        const handlefeth= async ()=>{
+            try {
+                const res = await fetch("/api/Categories")
+                if (res.ok){
+                    const data =await res.json()
+
+                    setCats(data.categories)
+                }
+            }catch (err){
+
+            }
+        }
+        handlefeth()
+        // console.log(btn)
+    },[])
+    
+    
+    
+
     const items = [
         { name: "صفحه اصلی", path: "/" },
         { name: "درباره ما", path: "/about" },
@@ -14,13 +37,14 @@ const UnderNav = () => {
         { name: "ارتباط با ما", path: "/contact" },
         { name: "بلاگ", path: "/blog" }
     ];
-    const Catagories = [
-        { name: "صفحه اصلی", path: "/" },
-        { name: "درباره ما", path: "/about" },
-        { name: "فروشگاه", path: "/shop" },
-        { name: "ارتباط با ما", path: "/contact" },
-        { name: "بلاگ", path: "/blog" }
-    ];
+    //
+    // const Catagories = [
+    //     { name: "صفحه اصلی", path: "/" },
+    //     { name: "درباره ما", path: "/about" },
+    //     { name: "فروشگاه", path: "/shop" },
+    //     { name: "ارتباط با ما", path: "/contact" },
+    //     { name: "بلاگ", path: "/blog" }
+    // ];
     const mobile_items = [
         { name: "فروشگاه", path: "/shop", icon: ShoppingBag },
         { name: "علاقه مندی", path: "/dashboard?section=favorite", icon: Heart },
@@ -45,7 +69,7 @@ const UnderNav = () => {
 
     return (
         <>
-            <div className={"p-5 w-full  z-10 h-fit lg:flex gap-15  hidden"}>
+            <div className={"p-5 w-full  z-10 h-fit lg:flex gap-15  hidden  "}>
                 <div
                     className={"flex gap-3 text-gray-500 w-70 justify-between cursor-pointer mr-20"}
                     onMouseEnter={handleMouseEnter}
@@ -62,10 +86,10 @@ const UnderNav = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             {
-                                Catagories.map((e,index)=>{
+                                Catagories.slice(0,5).map((e:any,index:number)=>{
                                     const last = Catagories.length -1
                                     return(
-                                        <Link href={`/?search=${e.path}`} key={index} className={`w-full h-fit border-b border-gray-300 text-sm text-black/80 pr-2 py-5 flex items-center cursor-pointer hover:opacity-70 ${index===last?"rounded-b-xl ":""} ${index===0?"rounded-t-xl":""}`}>{e.name}</Link>
+                                        <Link href={`/shop/?Category=${e.Slug}`} key={index} className={`w-full h-fit border-b border-gray-300 text-sm  pr-2 py-5 flex items-center cursor-pointer hover:opacity-70 ${index===last?"rounded-b-xl ":""} ${index===0?"rounded-t-xl":""}  ${search.get("Category") === e.Slug ? "text-[#ee156f]" : "text-black/60 hover:text-black"}`}>{e.name}</Link>
                                     )
                                 })
                             }
@@ -87,7 +111,7 @@ const UnderNav = () => {
                     })}
                 </div>
             </div>
-            <div className={"fixed bottom-0 bg-white w-full min-h-20 lg:hidden flex gap-5 items-center justify-around text-gray-500 p-5"}>
+            <div className={"fixed z-50 bottom-0 bg-white w-full min-h-20 lg:hidden flex gap-5 items-center justify-around text-gray-500 p-5"}>
                 {mobile_items.map((e:any,index:number)=>{
                     return(
                         <Link href={e.path} key={index} className="flex flex-col shrink-0 w-fit h-full items-center">

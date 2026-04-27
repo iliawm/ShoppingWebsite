@@ -17,8 +17,6 @@ const CategoriesSchema = new mongoose.Schema({
         type:String,
 
     }
-}, {
-    timestamps: true
 });
 
 export const Categories = mongoose.models.Categories || mongoose.model("Categories", CategoriesSchema);

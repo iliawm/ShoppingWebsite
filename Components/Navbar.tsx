@@ -7,6 +7,7 @@ import ProfMenu from "@/ui/Nav/ProfMenu";
 import Search from "@/ui/Nav/Search";
 
 const Navbar =async () => {
+
     const items = [
         { name: "صفحه اصلی", path: "/" },
         { name: "درباره ما", path: "/about" },
