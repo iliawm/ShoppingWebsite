@@ -4,6 +4,7 @@ import "./globals.css";
 import LocalFont from "next/font/local";
 import Navbar from "@/Components/Navbar";
 import UnderNav from "@/ui/Nav/UnderNav";
+import {Suspense} from "react";
 
 
 
@@ -58,7 +59,9 @@ export default function RootLayout({
       <section className={"NavSection h-fit bg-white  w-full flex flex-col z-70"}>
           <Navbar/>
           <div className={"UnderNav w-full h-fit  gap-3 flex"}>
-              <UnderNav/>
+              <Suspense fallback={<div>Loading...</div>}>
+                  <UnderNav />
+              </Suspense>
           </div>
       </section>
       <div className={"w-full h-fit bg-white text-black"}>
