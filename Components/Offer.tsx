@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 
 const Offer = async () => {
     let offerProducts = [];
@@ -51,7 +52,7 @@ const Offer = async () => {
                 <div className={"w-full h-70 lg:h-90 px-1 lg:px-3 py-2 lg:py-8 gap-7 hide-scrollbar flex overflow-x-scroll"}>
                     {offerProducts.map((e:any,index:number)=>{
                         return(
-                            <div key={index} className={"w-53 lg:h-full h-fit shrink-0 flex-col  flex rounded-lg items-center bg-white py-3"}>
+                            <Link href={`/shop/${e._id}`} key={index} className={"w-53 lg:h-full h-fit shrink-0 flex-col transition-all ease-linear  flex rounded-lg items-center bg-white py-3 cursor-pointer hover:opacity-80 hover:scale-[1.1]"} >
                                 <div>
                                     <Image src={e.image||`/placeholder.png`} alt={``} width={400} height={400} className={"object-fill w-45 lg:h-40 h-35 rounded-lg"} loading={"lazy"}/>
                                 </div>
@@ -62,7 +63,7 @@ const Offer = async () => {
                                     <div>{e.price}</div>
                                     <div>تومان</div>
                                 </div>
-                            </div>
+                            </Link>
                         )
                         })
                    }

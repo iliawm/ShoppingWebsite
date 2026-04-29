@@ -89,7 +89,7 @@ const UnderNav = () => {
                                 Catagories.slice(0,5).map((e:any,index:number)=>{
                                     const last = Catagories.length -1
                                     return(
-                                        <Link href={`/shop/?Category=${e.Slug}`} key={index} className={`w-full h-fit border-b border-gray-300 text-sm  pr-2 py-5 flex items-center cursor-pointer hover:opacity-70 ${index===last?"rounded-b-xl ":""} ${index===0?"rounded-t-xl":""}  ${search.get("Category") === e.Slug ? "text-[#ee156f]" : "text-black/60 hover:text-black"}`}>{e.name}</Link>
+                                        <Link href={`/shop/?Category=${e.Slug}`} key={index} className={`w-full h-fit border-b border-gray-300 text-sm  transition-all ease-linear duration-200 pr-2 py-5 flex items-center cursor-pointer hover:opacity-70 ${index===last?"rounded-b-xl ":""} ${index===0?"rounded-t-xl":""}  ${search.get("Category") === e.Slug ? "text-[#ee156f]" : "text-black/60 hover:text-[#ee156f]"}`}>{e.name}</Link>
                                     )
                                 })
                             }

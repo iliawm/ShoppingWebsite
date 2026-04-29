@@ -27,6 +27,9 @@ export default function Home() {
                     <Categories/>
               </Suspense>
           </section>
+          <section>
+
+          </section>
       </div>
   </main>
   );
