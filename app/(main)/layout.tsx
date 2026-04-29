@@ -50,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={"hide-scrollbar"}>
-      <body
+    <div lang="en" className={"hide-scrollbar"}>
+      <div
         className={`font-[vazir] antialiased min-h-screen h-screen  w-full  max-h-screen`}
         dir={"rtl"}
       >
@@ -69,7 +69,7 @@ export default function RootLayout({
       <div className={"w-full h-fit bg-white text-black"}>
         {children}
       </div>
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }
