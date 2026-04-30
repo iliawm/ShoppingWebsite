@@ -22,7 +22,11 @@ export async function getAuth() {
                     enum: ["User", "Admin", "Owner"],
                     defaultValue: "User",
                     input: false,
-                }
+                },
+                image: {
+                    type: "string",
+                    defaultValue: "/placeholder.png"
+                },
             }
         },
         plugins: [nextCookies()],
