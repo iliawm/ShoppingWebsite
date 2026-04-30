@@ -4,13 +4,14 @@ import Herosection from "@/Components/Herosection";
 import Offer from "@/Components/Offer";
 import {Suspense} from "react";
 import Categories from "@/Components/categories";
+import Footer from "@/ui/footer/footer";
 
 
 
 export default function Home() {
   return (
   <main className={"w-full h-fit scroll-smooth snap-y snap-mandatory "} dir={"rtl"}>
-      <div className={"flex w-full h-full flex-col gap-10 pb-20"}>
+      <div className={"flex w-full h-full flex-col gap-10 pb-20 lg:pb-0"}>
           <section  className={"w-full shrink-0 h-fit"}>
               <Posts/>
           </section>
@@ -28,7 +29,7 @@ export default function Home() {
               </Suspense>
           </section>
           <section>
-
+            <Footer/>
           </section>
       </div>
   </main>

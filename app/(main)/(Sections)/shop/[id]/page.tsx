@@ -8,7 +8,6 @@ export default async function ProductPage({params} : {params : Promise<{id:strin
         const res=await fetch(`http://localhost:3000/api/Products/product?prod=${id}`)
         if (res.ok){
             const data = await res.json()
-            console.log(data.product)
             product = data.product
         }
     }catch (err){
