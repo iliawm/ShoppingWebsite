@@ -41,40 +41,7 @@ Animations	Motion (formerly Framer Motion)
 Icons	Lucide React, React Icons
 Package Manager	pnpm
 Linting	ESLint 9 (Next.js config)
-📁 Project Structure
-text
-ShoppingWebsite/
-├── app/                    # Next.js App Router pages & layouts
-│   ├── (main)/             # Main storefront routes
-│   ├── Admin/              # Admin panel routes
-│   ├── api/                # API route handlers
-│   ├── layout.tsx          # Root layout
-│   └── globals.css         # Global styles
-├── Components/             # Shared UI components
-│   ├── Herosection.tsx     # Landing hero
-│   ├── Navbar.tsx          # Responsive navigation
-│   ├── Offer.tsx           # Promotional banner
-│   ├── categories.tsx      # Category cards / grid
-│   └── posts.tsx           # Blog post rendering
-├── ui/                     # UI‑specific building blocks
-│   ├── Nav/                # Navigation primitives
-│   ├── PostF/              # Post form components
-│   └── footer/             # Site footer
-├── lib/                    # Utilities & config
-│   ├── db.ts               # MongoDB connection
-│   ├── auth.ts / authServer.ts / auth-client.ts  # Auth logic
-├── models/                 # Mongoose / Zod models
-│   ├── products.ts
-│   ├── Post.ts
-│   ├── Catagories.ts
-│   └── user.ts
-├── public/                 # Static assets (images, icons)
-├── .eslintrc.config.mjs    # ESLint configuration
-├── next.config.js          # Next.js configuration
-├── tailwind.config.ts      # Tailwind configuration
-├── tsconfig.json           # TypeScript configuration
-├── package.json            # Dependencies & scripts
-└── pnpm-lock.yaml          # Lock file (pnpm)
+
 🚀 Getting Started
 Prerequisites
 Node.js ≥ 18
