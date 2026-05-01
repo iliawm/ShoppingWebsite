@@ -1,7 +1,7 @@
 🛍️ ShoppingWebsite – Modern Full‑Stack E‑Commerce Platform
-ShoppingWebsite is a modern, full‑stack e‑commerce application built with Next.js 16, React 19, and MongoDB. It delivers a fast, responsive storefront for customers and a powerful admin panel for managing products, posts, categories, and orders. The project focuses on clean UI, smooth animations (GSAP + Lenis), and a scalable architecture that separates user‑facing and administrative interfaces.
+A modern, full‑stack e‑commerce application built with Next.js 16, React 19, and MongoDB. ShoppingWebsite delivers a complete online shopping experience — from browsing products and managing a cart to handling user authentication and providing a dedicated admin panel for store management. Built with a clean, responsive UI using Tailwind CSS 4 and smooth animations powered by Motion, it separates user‑facing and administrative interfaces for a scalable architecture.
 
-"From product listing to checkout – one seamless experience."
+"From product listing to checkout — one seamless experience."
 
 ✨ Features
 🛒 User‑Facing Storefront
@@ -16,7 +16,7 @@ Blog / Posts – content section for news, guides, or promotions
 Responsive design – Tailwind CSS 4, fully mobile‑first
 
 ⚙️ Admin Panel
-Dashboard – overview of orders, users, and inventory (UI implemented)
+Dashboard – overview of orders, users, and inventory
 
 Product management – create, edit, and delete products
 
@@ -25,11 +25,9 @@ Post management – write and publish blog posts
 Category management – organise products with dynamic categories
 
 🎨 UI & Performance
-Smooth scroll (Lenis) and page transitions (GSAP, Motion)
+Smooth animations and page transitions (Motion)
 
-3D elements with Three.js / React‑Three‑Fiber
-
-Monitored with Vercel Analytics & Speed Insights
+Optimized with Next.js server‑side rendering and static generation
 
 🛠️ Tech Stack
 Category	Technology
@@ -39,11 +37,9 @@ Language	TypeScript 5
 Styling	Tailwind CSS 4
 Database	MongoDB + Mongoose 9
 Authentication	Better Auth
-Animations	GSAP, Motion, Lenis
-3D	Three.js, React‑Three‑Fiber
+Animations	Motion (formerly Framer Motion)
 Icons	Lucide React, React Icons
-Analytics	Vercel Analytics, Speed Insights
-Package Manager	pnpm (workspace ready)
+Package Manager	pnpm
 Linting	ESLint 9 (Next.js config)
 📁 Project Structure
 text
