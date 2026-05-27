@@ -162,8 +162,8 @@ export default function Dashboard() {
                         </div>
                         {showLabels && (
                             <div className="text-sm overflow-hidden">
-                                <p className="font-medium truncate">{user?.name || 'کاربر'}</p>
-                                <p className="text-gray-500 text-xs truncate">{user?.email || 'user@example.com'}</p>
+                               <p className="font-medium truncate">{(user as any)?.name || 'کاربر'}</p>
+                               <p className="text-gray-500 text-xs truncate">{(user as any)?.email || 'user@example.com'}</p>
                             </div>
                         )}
                     </div>
