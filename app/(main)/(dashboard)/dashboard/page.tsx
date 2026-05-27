@@ -158,7 +158,7 @@ export default function Dashboard() {
                 <div className="absolute bottom-0 left-0 right-0 p-3 lg:p-4 border-t">
                     <div className={`flex items-center ${showLabels ? 'gap-3' : 'justify-center'}`}>
                         <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center shrink-0 text-sm font-medium">
-                            {user?.name?.[0] || '👤'}
+                           {(user as any)?.name?.[0] || '👤'}
                         </div>
                         {showLabels && (
                             <div className="text-sm overflow-hidden">
