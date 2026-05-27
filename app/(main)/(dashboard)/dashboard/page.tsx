@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState<{name?: string; email?: string} | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [tabletExpanded, setTabletExpanded] = useState(false);
 
@@ -158,12 +158,12 @@ export default function Dashboard() {
                 <div className="absolute bottom-0 left-0 right-0 p-3 lg:p-4 border-t">
                     <div className={`flex items-center ${showLabels ? 'gap-3' : 'justify-center'}`}>
                         <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center shrink-0 text-sm font-medium">
-                           {(user as any)?.name?.[0] || '👤'}
+                            {user?.name?.[0] || '👤'}
                         </div>
                         {showLabels && (
                             <div className="text-sm overflow-hidden">
-                               <p className="font-medium truncate">{(user as any)?.name || 'کاربر'}</p>
-                               <p className="text-gray-500 text-xs truncate">{(user as any)?.email || 'user@example.com'}</p>
+                                <p className="font-medium truncate">{user?.name || 'کاربر'}</p>
+                                <p className="text-gray-500 text-xs truncate">{user?.email || 'user@example.com'}</p>
                             </div>
                         )}
                     </div>
