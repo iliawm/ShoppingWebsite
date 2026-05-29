@@ -1,4 +1,4 @@
-🛍️ ShoppingWebsite – Modern Full‑Stack E‑Commerce Platform
+<img width="1900" height="1079" alt="Screenshot 2026-05-30 000032" src="https://github.com/user-attachments/assets/bc8dbcad-28f6-4f03-a20b-ea694d4aa05b" /><img width="366" height="654" alt="Screenshot 2026-05-29 234558" src="https://github.com/user-attachments/assets/885de2b0-4431-4b3d-8a5f-47807640a2b5" />🛍️ ShoppingWebsite – Modern Full‑Stack E‑Commerce Platform
 A modern, full‑stack e‑commerce application built with Next.js 16, React 19, and MongoDB. ShoppingWebsite delivers a complete online shopping experience — from browsing products and managing a cart to handling user authentication and providing a dedicated admin panel for store management. Built with a clean, responsive UI using Tailwind CSS 4 and smooth animations powered by Motion, it separates user‑facing and administrative interfaces for a scalable architecture.
 
 "From product listing to checkout — one seamless experience."
@@ -128,3 +128,7 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 ILIAWM – github.com/iliawm
 
 Built with ❤️ using Next.js, React, MongoDB, and Tailwind CSS.
+<img width="371" height="665" alt="Screenshot 2026-05-30 000101" src="https://github.com/user-attachments/assets/14d46066-6558-4ecf-b8eb-5168d1fbee48" />
+![Uploading Screenshot 2026-05-30 000032.png…]()
+![Uploading Screenshot 2026-05-29 234558.png…]()
+![Uploading Screenshot 2026-05-29 234544.png…]()
