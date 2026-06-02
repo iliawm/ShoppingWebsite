@@ -116,7 +116,7 @@ Fork the repository
 Create a feature branch (git checkout -b feature/amazing-feature)
 
 Commit your changes (git commit -m 'Add some amazing feature')
-<img width="371" height="665" alt="Screenshot 2026-05-30 000101" src="https://github.com/user-attachments/assets/2d8ffa02-4ecd-4315-8c0f-bf0e8cceb44b" />
+
 
 Push to the branch (git push origin feature/amazing-feature)
 
