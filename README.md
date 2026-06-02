@@ -116,6 +116,7 @@ Fork the repository
 Create a feature branch (git checkout -b feature/amazing-feature)
 
 Commit your changes (git commit -m 'Add some amazing feature')
+<img width="371" height="665" alt="Screenshot 2026-05-30 000101" src="https://github.com/user-attachments/assets/2d8ffa02-4ecd-4315-8c0f-bf0e8cceb44b" />
 
 Push to the branch (git push origin feature/amazing-feature)
 
@@ -129,6 +130,7 @@ ILIAWM – github.com/iliawm
 
 Built with ❤️ using Next.js, React, MongoDB, and Tailwind CSS.
 <img width="371" height="665" alt="Screenshot 2026-05-30 000101" src="https://github.com/user-attachments/assets/14d46066-6558-4ecf-b8eb-5168d1fbee48" />
-![Uploading Screenshot 2026-05-30 000032.png…]()
-![Uploading Screenshot 2026-05-29 234558.png…]()
-![Uploading Screenshot 2026-05-29 234544.png…]()
+<img width="1900" height="1079" alt="Screenshot 2026-05-30 000032" src="https://github.com/user-attachments/assets/d1ef463b-d375-41f3-8ded-708931b7cf1f" />
+<img width="366" height="654" alt="Screenshot 2026-05-29 234558" src="https://github.com/user-attachments/assets/0070b027-0e08-46a2-97a7-4e33a64f8954" />
+<img width="1890" height="934" alt="Screenshot 2026-05-29 234544" src="https://github.com/user-attachments/assets/26af7d87-310f-4735-9dfa-ece13467068b" />
+
