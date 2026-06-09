@@ -125,10 +125,10 @@ Open a Pull Request
 📄 License
 This project is licensed under the MIT License – see the LICENSE file for details.
 
+Built with ❤️ using Next.js, React, MongoDB, and Tailwind CSS.
 👤 Author
 ILIAWM – github.com/iliawm
 
-Built with ❤️ using Next.js, React, MongoDB, and Tailwind CSS.
 <img width="371" height="665" alt="Screenshot 2026-05-30 000101" src="https://github.com/user-attachments/assets/14d46066-6558-4ecf-b8eb-5168d1fbee48" />
 <img width="1900" height="1079" alt="Screenshot 2026-05-30 000032" src="https://github.com/user-attachments/assets/d1ef463b-d375-41f3-8ded-708931b7cf1f" />
 <img width="366" height="654" alt="Screenshot 2026-05-29 234558" src="https://github.com/user-attachments/assets/0070b027-0e08-46a2-97a7-4e33a64f8954" />
